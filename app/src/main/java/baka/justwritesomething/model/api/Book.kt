@@ -1,3 +1,7 @@
 package baka.justwritesomething.model.api
 
-data class Book(val id: String, val name: String)
+import com.squareup.moshi.Json
+
+data class Book(
+    @field:Json(name = "id") val id: String,
+    @field:Json(name = "name") val name: String)
